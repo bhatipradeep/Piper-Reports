@@ -6,10 +6,10 @@ function NavBar(props){
         auth0Client.signOut();
         props.history.replace('/')
     }
-
+    
     return (
         <nav className="navbar navbar-dark bg-primary fixed-top">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/home">
           Piper-Reports
         </Link>
         {

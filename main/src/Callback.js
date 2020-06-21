@@ -6,7 +6,7 @@ class Callback extends React.Component{
     
     async componentDidMount(props){
         await auth0Client.handleAuthentication();
-        this.props.history.replace('/')
+        this.props.history.replace('/home')
     }
     render(){
         return(
