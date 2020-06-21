@@ -23,11 +23,11 @@ const checkJwt = jwt({
       cache: true,
       rateLimit: true,
       jwksRequestsPerMinute: 5,
-      jwksUri: `https://berlin.us.auth0.com/.well-known/jwks.json`
+      jwksUri: ``
     }),
 
-    audience: '5xMQun5O1b7yvvrK6P79ooz8grefJMGt',
-    issuer: `https://berlin.us.auth0.com/`,
+    audience: '',
+    issuer: ``,
     algorithms: ['RS256']
 });
 
