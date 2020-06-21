@@ -26,12 +26,12 @@ class FirstTimeForm extends React.Component{
 
     async submit(){
         const name = auth0Client.getProfile().name;
-        const params = {
+        
+        (await axios.post(`http://localhost:8081/${name}`,
+        {
             userName : this.state.userName,
             type: this.state.type
-        }
-        (await axios.post(`http://localhost:8081/${name}`,
-            params, 
+        }, 
         {
             headers: { 'Authorization': `Bearer ${auth0Client.getIdToken()}` }
         }));
